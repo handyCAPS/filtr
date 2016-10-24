@@ -1,0 +1,23 @@
+
+.list {
+	height: 80vh;
+	overflow-y: auto;
+	list-style: none;
+	border: 1px solid #C2C2C2;
+	margin: 0;
+	padding: 0.25em 0.5em;
+}
+
+.list li {
+
+}
+
+.list li:hover {
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.26);
+}
+
+.list li.selected {
+	color: #FFF;
+	background-color: rgba(0,0,0,0.56);
+}

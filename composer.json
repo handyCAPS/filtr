@@ -1,0 +1,12 @@
+{
+    "name": "tido/filtr",
+    "authors": [
+        {
+            "name": "Tim Doppenberg",
+            "email": "tim.doppenberg@carapaxit.nl"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "^1.6"
+    }
+}
