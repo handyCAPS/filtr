@@ -21,15 +21,20 @@ $fullQuery = "SELECT
 
 $cityQuery = "SELECT * from city";
 
-$familyQuery= "SELECT * from family";
+$familyQuery= "SELECT
+		family.id as familyId,
+		family.name as familyName,
+		city.id as cityId from family
+		inner join (city) on family.city_id = city.id";
 
 $nameQuery = "SELECT 
 		name.name as firstName,
 		family.name as lastName,
 		name.id as nameId,
 		family.id as familyId,
-		city.name as cityName
-		from name inner join (family, city) on name.family_id = family.id and family.city_id = city.id";
+		city.name as cityName from name 
+		inner join (family, city) on name.family_id = family.id
+		and family.city_id = city.id";
 
 $cityresult = $db->query($cityQuery);
 $cityArray = [];
@@ -45,6 +50,8 @@ $nameArray = [];
 <div class="container">
 
 	<h1>Find a family</h1>
+
+	<button type="button" id="btnClearAll">Clear All</button>
 	
 	<div class="row">
 

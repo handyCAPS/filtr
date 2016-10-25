@@ -15,11 +15,10 @@ echo "<datalist class='dlist' name='name' id='name'>";
 	}
 echo "</datalist>";
 
-echo "<select size='30' class='list form-control'>";
+echo "<select size='30' class='list form-control' data-list='name' id='select-name'>";
 
 foreach ($nameArray as $name) {
-	// echo "<li data-reference='{$name['nameId']}' data-belongsto='{$name['familyId']}'>{$name['firstName']} {$name['lastName']} - {$name['cityName']}</li>";
-	echo "<option value='{$name['nameId']}'>{$name['firstName']} {$name['lastName']} - {$name['cityName']}</option>";
+	echo "<option value='{$name['nameId']}' data-reference='{$name['nameId']}' data-belongsto='{$name['familyId']}'>{$name['firstName']} {$name['lastName']} - {$name['cityName']}</option>";
 }
 
 echo "</select>";

@@ -10,9 +10,8 @@ while ($cityRow = $cityresult->fetch_assoc()) {
 }
 echo "</datalist>";
 
-echo "<select size='30' class='list form-control'>";
+echo "<select size='30' class='list form-control' data-list='city' data-filters='family' id='select-city'>";
 foreach ($cityArray as $city) {
-	// echo "<li data-reference='{$city['id']}'>{$city['name']}</li>";
-	echo "<option value='{$city['id']}'>{$city['name']}</option>";
+	echo "<option value='{$city['id']}' data-reference='{$city['id']}'>{$city['name']}</option>";
 }
 echo "</select>";
