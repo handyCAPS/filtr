@@ -49,24 +49,33 @@ $nameArray = [];
 
 <div class="container">
 
-	<h1>Find a family</h1>
-
-	<button type="button" id="btnClearAll">Clear All</button>
-	
-	<div class="row">
-
-		<div class="col-md-4">
-			<?php include_once 'citylist.php'; ?>
+	<div class="panel panel-primary">
+		<div class="panel-heading collapsible">
+			<h1 class="panel-title">Find a family</h1>
 		</div>
+		
+		<div class="row panel-body" id="selectors">
+			
+			<div class="col-sm-12">
+				<button type="button" id="btnClearAll" class="btn btn-danger">Clear All</button>
+			</div>
 
-		<div class="col-md-4">
-			<?php include_once 'familylist.php'; ?>
+			<div class="col-md-4 wrap">
+				<button type="button" class="btn btn-secondary btn-clear">Clear</button>
+				<?php include_once 'citylist.php'; ?>
+			</div>
+
+			<div class="col-md-4 wrap">
+				<button type="button" class="btn btn-secondary btn-clear">Clear</button>
+				<?php include_once 'familylist.php'; ?>
+			</div>
+
+			<div class="col-md-4 wrap">
+				<button type="button" class="btn btn-secondary btn-clear">Clear</button>
+				<?php include_once 'namelist.php'; ?>
+			</div>
+
 		</div>
-
-		<div class="col-md-4">
-			<?php include_once 'namelist.php'; ?>
-		</div>
-
 	</div>
 
 </div>
